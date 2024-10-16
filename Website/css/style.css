@@ -1,0 +1,753 @@
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #574293;
+  --color-text-main: #818181;
+  --color-primary: #000000;
+  --wrapper-height: 87vh;
+  --image-max-width: 1000px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+
+/* new shit below */
+
+::selection {
+  background: violet;
+}
+
+#pink {
+  color: pink;
+  font-weight: bold;
+}
+
+#pink2 {
+  color: pink;
+  font-weight: bold;
+}
+
+marquee {
+  font-family: "Times New Roman", sans-serif;
+  opacity: 50%;
+  top: 15%;
+  position: relative;
+  font-size: 50px;
+  color: pink;
+  behavior: alternate;
+}
+marquee:hover {
+  color: purple;
+  opacity: 100%;
+  font-size: 150px;
+  font-weight: 900;
+  font-family: "Helvetica", serif;
+  background-color: darkblue;
+  transition: opacity 1200ms ease, color 1000ms ease, font-size 15000ms linear,
+    background-color 200ms ease, font-weight 20ms ease;
+  transition-delay: 0s, 1000ms, 5000ms, 21000ms, 25000ms;
+}
+
+#markie {
+  position: fixed;
+  top: 15%;
+}
+
+.grabbing * {
+  cursor: grabbing !important;
+}
+
+/* body.drag
+{
+  cursor: none;
+  user-select: none;
+} */
+
+.logo {
+  top: 0;
+  left: 0;
+  position: fixed;
+  margin: -45px 5px;
+  z-index: 4;
+  opacity: 25%;
+}
+
+.logo2 {
+  transform: rotate(0.5turn);
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  margin: -45px 5px;
+  z-index: 4;
+  opacity: 25%;
+}
+
+/*for visual tab */
+.topnav2 {
+  height: 14%;
+  position: fixed;
+  top: 0;
+  left: 9%;
+  width: 91%;
+  background-color: rgba(170, 170, 170, 0.9);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.topnav {
+  font-family: "Helvetica", sans-serif;
+  height: 14%;
+  position: fixed;
+  top: 0;
+  left: 9%;
+  width: 82%;
+  background-color: rgba(170, 170, 170, 0.9);
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #818181;
+  text-align: right;
+  padding: 3% 9%;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.bottomnav {
+  height: 14%;
+  position: fixed;
+  bottom: 0;
+  left: 9%;
+  width: 82%;
+  background-color: rgba(170, 170, 170, 0.9);
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Style the links inside the navigation bar */
+.bottomnav a {
+  display: none;
+}
+
+.sidenavright {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 9%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  float: left;
+  background-color: rgba(170, 170, 170, 0.9); /* color of sidebar background */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 17%;
+}
+
+/* The navigation menu links */
+.sidenavright a {
+  padding: 20% 20px;
+  text-decoration: none;
+  font-size: 27px;
+  color: rgba(129, 129, 129, 0.5);
+  display: block;
+}
+
+.sidenav a {
+  padding: 20% 20px;
+  text-decoration: none;
+  font-size: 27px;
+  color: rgba(129, 129, 129, 0.5);
+  display: block;
+}
+
+.sidenavright a:hover {
+  color: pink;
+  transition: color 400ms ease;
+}
+
+.sidenavright a:active {
+  color: #ffccd5;
+  font-weight: bolder;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 9%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 3; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(170, 170, 170, 0.9); /* color of sidebar background */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 17%;
+}
+
+/*.sidenav:hover{ //can mess around w this, do something cool w it
+  width: 10%;
+}*/
+
+/* The navigation menu links */
+
+.sidenav a:hover {
+  color: pink;
+  transition: color 400ms ease;
+}
+
+.sidenav a:active {
+  color: #ffccd5;
+  font-weight: bolder;
+}
+
+/* Style page content */
+.main {
+  margin-left: 10%;
+  margin-right: 10%; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.justified {
+  right: 16%;
+  top: -10%;
+  position: fixed;
+  color: rgba(129, 129, 129, 0.5);
+  text-align: center;
+  font-size: 100px;
+}
+
+.infoPage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 255, 166, 0.5);
+}
+
+.infoPage2 a {
+  color: rgba(0, 255, 166, 0.5);
+  text-decoration: none;
+}
+
+.infoPage2 a:hover {
+  color: rgba(0, 255, 166, 0.7);
+  text-decoration: rgba(0, 255, 166, 0.6) wavy underline;
+}
+
+.infoPage2 {
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -95%);
+  color: rgba(0, 255, 166, 0.4);
+}
+
+/******************************************************************************
+PHONE SCREEN BELOW
+******************************************************************************/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+/*@media screen and (max-width:300px) {
+  
+  .logo{
+    width: 100%;
+    text-align: center;
+    margin: -45px 5px;
+    opacity: 60%;
+  }
+  
+   .logo2{
+  display: none;
+   width: 1%;
+}
+  #markie {
+  position: fixed;
+  top: 0%;
+  
+}
+  marquee{
+    font-size: 45px;
+  }
+  .topnav{
+    padding: 17%;
+    width: 100%;
+    left: 0%;
+    display:none;    
+  }
+  
+  .bottomnav{
+  /*  border-radius: 45% 50% 40% 70%; 
+    height: 25%;
+    position: fixed;
+    left:0%;
+    width: 100%;
+    
+  }
+
+  
+   .bottomnav a{
+    float: left;
+    opacity: 50%;
+    width: 25%;
+    padding: 2px;
+    display:block;
+
+  }
+  
+  .sidenav {
+    padding: 17%;
+    padding-top: 10%;
+    display:none;
+
+  }
+  .sidenav a {
+    display: none;
+    font-size: 30px;
+    width: 10%;
+    writing-mode: vertical-rl;
+  }
+  
+  .sidenavright {
+    display: none;
+    padding: 5%;
+    padding-top: 10%;
+  }
+  .sidenavright a {
+    font-size: 30px;
+    width: 10%;
+    writing-mode: vertical-rl;
+  }
+  
+  .marqueemobile {
+  height: 50px;
+ overflow: visible;
+
+}
+  
+  
+}
+
+
+/* Navigation grid */
+
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  /*overflow: hidden; /* gets rid of scrolling entirely */
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+.scrolling {
+  overflow: auto;
+}
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+/*draggable CSS */
+
+#visuals {
+  position: absolute;
+  text-align: center;
+  top: 27%;
+  left: 50%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(10px 10px 10px #4444aa);
+}
+#visuals2 {
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 56%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(10px 10px 10px #4444aa);
+}
+#visuals3 {
+  position: absolute;
+  text-align: center;
+  top: 76%;
+  left: 60%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(10px 10px 10px #4444aa);
+}
+#visuals4 {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 40%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(13px 13px 10px #4444aa);
+}
+#visuals5 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 43%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(10px 10px 10px #4444aa);
+}
+
+#visuals6 {
+  position: absolute;
+  text-align: center;
+  top: 57%;
+  left: 66%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(9px 9px 9px #4444aa);
+}
+
+#visuals7 {
+  position: absolute;
+  text-align: center;
+  top: 33%;
+  left: 28%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(9px 9px 9px #4444aa);
+}
+
+#visuals8 {
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 68%;
+  cursor: grab;
+  z-index: 1;
+  filter: drop-shadow(9px 9px 9px #4444aa);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #2800ff;
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+.art {
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  color: #2800ff;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: rotate(0.02turn);
+}
+
+.giftest {
+  size: 500px;
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* parallax*/
+
+.parallax {
+  /* The image used */
+  background-image: url("https://cdn.glitch.global/fd204e9f-2e94-437b-8cc8-2de6fbb95520/sinwave.gif?v=1665776793067");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  margin: 0% 8.5%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("https://cdn.glitch.global/fd204e9f-2e94-437b-8cc8-2de6fbb95520/ratgif.gif?v=1676922488476");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  margin: 0% 8.5%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url("https://cdn.glitch.global/fd204e9f-2e94-437b-8cc8-2de6fbb95520/asciii%20crop.gif?v=1676924058582");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  margin: 0% 8.5%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* new stuff*/
+/*
+.scroll-left {
+  top: 16%;
+  height: 50px;	
+  overflow: visible;
+  position: relative;
+  color: pink;
+  font-family: "Times New Roman", sans-serif; 
+  opacity: 50%;
+  position: relative;
+  font-size: 50px;
+  color: pink;
+  width: 2000px;
+  line-height: 50px;
+  text-align: center;
+
+}
+.scroll-left #cssScroll1 {
+  
+ /* Starting position 
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%); */
+/* Apply animation to this element */
+/* -moz-animation: scroll-left 18s linear infinite;
+ -webkit-animation: scroll-left 18s linear infinite;
+ animation: scroll-left 18s linear infinite;
+}
+.scroll-left #cssScroll2 {
+ -moz-animation: scroll-left 10s linear infinite;
+ -webkit-animation: scroll-left 10s linear infinite;
+ animation: scroll-left 10s linear infinite;
+}
+.scroll-left #cssScroll3 {
+ -moz-animation: scroll-left 13s linear infinite;
+ -webkit-animation: scroll-left 13s linear infinite;
+ animation: scroll-left 13s linear infinite;
+}
+
+
+/*
+I dont know what this is for... lol
+Move it (define the animation) 
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%); 
+ transform: translateX(-100%); 
+ }
+} */
+
+/* NEW STUFF CSS ANIMATION FOR HOME PAGE */
+
+@-webkit-keyframes tower {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 65%;
+  }
+  100% {
+    left: 20%;
+  }
+}
+
+.marqueeDiv {
+  font-family: "Times New Roman", sans-serif;
+  opacity: 50%;
+  box-sizing: border-box;
+  font-size: 50px;
+  color: pink;
+}
+
+#marq1 {
+  bottom: 67%;
+  padding-left: 10%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 13s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq2 {
+  bottom: 61%;
+  padding-left: 3%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 12.3s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq3 {
+  bottom: 55%;
+  padding-left: 5%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 11.6s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq4 {
+  bottom: 49%;
+  padding-left: 5%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 10.9s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq5 {
+  bottom: 43%;
+  padding-left: 0%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 10.2s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq6 {
+  bottom: 37%;
+  padding-left: 5%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 9.5s;
+  -webkit-animation-delay: -3s; 
+}
+
+#marq7 {
+  bottom: 31%;
+  padding-left: 5%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 8.8s;
+  -webkit-animation-delay: -3s;
+}
+
+#marq8 {
+  bottom: 25%;
+  padding-left: 0%;
+  position: absolute;
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: tower;
+  -webkit-animation-duration: 8.1s;
+  -webkit-animation-delay: -3s;
+}
